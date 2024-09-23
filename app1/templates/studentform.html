@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="card mx-auto text-center" style="width: 30rem">
+        <div class="card-header bg-danger text-white">
+            <h1>{{action}} Employee</h1>
+        </div>
+        <div class="card-body">
+            <form action="" method="post">
+                {% csrf_token %}
+                Student Name
+                <p>{{form.student_name}}</p>
+                Age
+                <p>{{form.age}}</p>
+                Tenth_Percentage
+                <p>{{form.tenth_per}}</p>
+                Twelveth_Percentage
+                <p>{{form.twelve_per}}</p>
+                Department
+                <p>{{form.interest_dept}}</p>
+                Email-Id
+                <p>{{form.email_id}}</p>
+                Mobile Number
+                <p>{{form.phone}}</p>
+                Address
+                <p>{{form.address}}</p>
+                <input class="btn btn-success" type="submit" value="SAVE"/>
+                <input class="btn btn-danger" type="reset" value="ClearAll" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
